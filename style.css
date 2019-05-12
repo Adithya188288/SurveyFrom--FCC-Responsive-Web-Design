@@ -1,0 +1,139 @@
+/* CSS RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background color of the page */
+body {
+  background-image: linear-gradient(
+    to left,
+    #1256eb,
+    #0084ff,
+    #00a9ff,
+    #00c8f9,
+    #12e3eb
+  );
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+/* form container */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* class which centers the element */
+.text-center {
+  text-align: center;
+}
+
+/* structure of the card layout */
+.survey-card {
+  background: white;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem;
+  padding: 1rem;
+  opacity: 0.9;
+  box-shadow: 0.5px 0.5px 5px 1px #333;
+  border-radius: 5px;
+}
+
+/* Paragraph style */
+#description {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+/* form displayed as a table */
+.form {
+  display: table;
+}
+/* Each div which has a class of form-wrap is displayed as an indivudual row */
+.form-wrap {
+  display: table-row;
+}
+
+/* labels inside form-wrap class are displayed as table cell */
+.form-wrap label {
+  position: relative;
+  display: table-cell;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1rem;
+}
+
+/* input and textarea inside form-wrap class are displayed as table cell */
+.form-wrap input,
+.form-wrap textarea {
+  display: table-cell;
+  padding: 0.3rem 1rem 1rem 1rem;
+  border: none;
+  border-bottom: 1px solid #0084ff;
+  margin: 1rem;
+  width: 90%;
+  overflow: hidden;
+}
+
+/* input element which acquires the age is displayed as a textfield  */
+.form-wrap input[type="number"] {
+  -moz-appearance: textfield;
+  padding: 0.3rem 1rem 1rem 1rem;
+}
+
+/* dropdown styles */
+.form-wrap select {
+  width: 90%;
+  padding: 0.3rem 1rem 1rem 1rem;
+  border: none;
+  border-bottom: 1px solid #0084ff;
+  margin: 1rem;
+  -moz-appearance: textfield;
+}
+
+/* radio button styles */
+.form-wrap input[type="radio"] {
+  margin: 1rem 0 1rem 1rem;
+  width: auto;
+  /* setting this to auto actually align both the radio button in a straight line */
+}
+
+/* Checkbox container is centered and displayed as a table */
+.form-wrap .checkbox-container {
+  display: table;
+  margin: 0 auto;
+}
+/* Div inside acts as a table-row */
+.form-wrap .checkbox-container div {
+  display: table-row;
+}
+/* checkbox and label acts as an table cell */
+.form-wrap .checkbox-container div input,
+.form-wrap .checkbox-container div label {
+  display: table-cell;
+}
+/* Add the important * sign before the required element */
+#email-label::before,
+#name-label::before {
+  content: " * ";
+  position: absolute;
+  top: 19px;
+  left: 105px;
+  color: red;
+}
+/* Submit button style */
+#btn-ship input {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #0084ff;
+  color: aliceblue;
+  border: 1px solid #00a9ff;
+  border-radius: 5px;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Survey form</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      media="only screen and (max-width:768px)"
+      href="responsive.css"
+    />
+  </head>
+  <body>
+    <main class="container" id="survey">
+      <!-- User Story #1: I can see a title with id="title" in H1 sized text. -->
+      <!-- User Story #10: For the name, email, and number input fields inside the form I can see corresponding
+           labels that describe the purpose of each field with the following ids:
+           id="name-label", id="email-label", and id="number-label". -->
+      <!-- User Story #11: For the name, email, and number input fields, I can see placeholder text that gives 
+           me a description or instructions for each field. -->
+      <h1 id="title" class="text-center">Teacher Survey Form</h1>
+      <div class="survey-card">
+        <!-- User Story #2: I can see a short explanation with id="description" in P sized text. -->
+
+        <p id="description" class="text-center">
+          Let us know what do think about your teacher
+        </p>
+
+        <!-- User Story #3: I can see a form with id="survey-form" -->
+
+        <form id="survey-form" name="contact" method="POST" data-netlify="true">
+          <div class="form-wrap text-center">
+            <!-- User Story #4: Inside the form element, I am required to enter my name in a field with id="name". -->
+
+            <label id="name-label" for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+              name="name"
+            />
+          </div>
+          <div class="form-wrap text-center">
+            <!-- User Story #5: Inside the form element, I am required to enter an email in a field with id="email". -->
+            <!-- User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error. -->
+            <label id="email-label" for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+              name="email"
+            />
+          </div>
+          <div class="form-wrap text-center">
+            <!-- User Story #7: Inside the form, I can enter a number in a field with id="number" -->
+            <!-- User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error. -->
+            <!-- User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error. -->
+            <label id="number-label" for="number">Age</label>
+            <input
+              type="number"
+              min="1"
+              max="45"
+              id="number"
+              placeholder="Enter your age"
+              name="age"
+            />
+          </div>
+          <!-- User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown". -->
+          <div class="form-wrap text-center">
+            <label id="gender-label" for="dropdown">Gender</label>
+            <select name="gender" id="dropdown">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Others</option>
+            </select>
+          </div>
+          <!-- User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute. -->
+          <div class="form-wrap text-center">
+            <label id="radio-label">Are you a Satisfied?</label>
+            <input type="radio" name="student" value="Yes" /> Yes
+            <input type="radio" name="student" value="No" /> No
+          </div>
+          <!-- User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute. -->
+          <div class="form-wrap text-center">
+            <label id="checkbox-label"
+              >Good Qualities - Select all that applies</label
+            >
+            <div class="checkbox-container text-center">
+              <div>
+                <input
+                  type="checkbox"
+                  name="qualities-known0"
+                  value="knowledgeable"
+                /><label>Knowledgeable</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="qualities-known1"
+                  value="friendly"
+                /><label>Friendly</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="qualities-known2"
+                  value="patient"
+                /><label>Patient</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="qualities-known3"
+                  value="integrity"
+                /><label>Integrity</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="qualities-known4"
+                  value="respectful"
+                /><label>Respectful</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="qualities-known4"
+                  value="forgiving"
+                /><label>Forgiving</label>
+              </div>
+            </div>
+          </div>
+          <!-- User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments. -->
+          <div class="form-wrap text-center">
+            <label id="message-label" for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="40"
+              rows="5"
+              placeholder="Enter your message"
+            ></textarea>
+          </div>
+          <!-- User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. -->
+          <div id="btn-ship" class="text-center">
+            <input type="submit" id="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="
+  https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

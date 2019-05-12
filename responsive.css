@@ -1,0 +1,40 @@
+/* This stylesheet will be applied for devices with max-width less than or equal to 768px */
+
+/* Display table has been removed and all the elements has be aligned to the left */
+p {
+  font-size: 12px;
+}
+
+/* Setting the margin to 0 */
+.form-wrap label,
+.form-wrap select {
+  margin: 0;
+}
+
+/* All the elements has be set to displayed block so they start in a new line */
+.form-wrap,
+.form-wrap label,
+.form-wrap input,
+.form-wrap textarea {
+  display: block;
+  max-width: 90%;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* Radio input display is set to inline so the content are aligned in a line  */
+.form-wrap input[type="radio"] {
+  display: inline;
+}
+
+/* Adjusting the required * element near to the label */
+/* While resizing the element flow through the page */
+
+#email-label::before,
+#name-label::before {
+  content: " * ";
+  position: absolute;
+  top: 19px;
+  left: 1px;
+  color: red;
+}
