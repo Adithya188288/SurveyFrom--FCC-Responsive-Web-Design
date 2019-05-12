@@ -80,17 +80,24 @@
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Other">Others</option>
+              <i class="fas fa-angle-down"></i>
             </select>
           </div>
           <!-- User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute. -->
-          <div class="form-wrap text-center">
-            <label id="radio-label">Are you a Satisfied?</label>
-            <input type="radio" name="student" value="Yes" /> Yes
-            <input type="radio" name="student" value="No" /> No
+          <div class="form-wrap text-center" id="satisfied">
+            <label id="radio-label" for="satisfied">Are you a Satisfied?</label>
+            <div class="text-align-left">
+              <input
+                type="radio"
+                name="student"
+                id="satisfied"
+                value="Yes"
+              />Yes<input type="radio" name="student" value="No" />No
+            </div>
           </div>
           <!-- User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute. -->
           <div class="form-wrap text-center">
-            <label id="checkbox-label"
+            <label id="checkbox-label" for="qualities"
               >Good Qualities - Select all that applies</label
             >
             <div class="checkbox-container text-center">
@@ -99,6 +106,7 @@
                   type="checkbox"
                   name="qualities-known0"
                   value="knowledgeable"
+                  id="qualities"
                 /><label>Knowledgeable</label>
               </div>
               <div>

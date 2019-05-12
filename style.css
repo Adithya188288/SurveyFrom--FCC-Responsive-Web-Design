@@ -33,6 +33,10 @@ body {
   text-align: center;
 }
 
+.text-align-left {
+  text-align: left;
+}
+
 /* structure of the card layout */
 .survey-card {
   background: white;
@@ -94,20 +98,20 @@ body {
   border: none;
   border-bottom: 1px solid #0084ff;
   margin: 1rem;
-  -moz-appearance: textfield;
 }
 
 /* radio button styles */
 .form-wrap input[type="radio"] {
-  margin: 1rem 0 1rem 1rem;
+  margin: 0.7rem;
   width: auto;
+  transform: translateX(5px);
+  border: none;
   /* setting this to auto actually align both the radio button in a straight line */
 }
 
 /* Checkbox container is centered and displayed as a table */
 .form-wrap .checkbox-container {
   display: table;
-  margin: 0 auto;
 }
 /* Div inside acts as a table-row */
 .form-wrap .checkbox-container div {
@@ -117,6 +121,7 @@ body {
 .form-wrap .checkbox-container div input,
 .form-wrap .checkbox-container div label {
   display: table-cell;
+  border: none;
 }
 /* Add the important * sign before the required element */
 #email-label::before,

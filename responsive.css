@@ -6,8 +6,7 @@ p {
 }
 
 /* Setting the margin to 0 */
-.form-wrap label,
-.form-wrap select {
+.form-wrap label {
   margin: 0;
 }
 
@@ -25,6 +24,7 @@ p {
 /* Radio input display is set to inline so the content are aligned in a line  */
 .form-wrap input[type="radio"] {
   display: inline;
+
 }
 
 /* Adjusting the required * element near to the label */
